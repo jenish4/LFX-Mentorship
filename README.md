@@ -19,6 +19,9 @@ described in section 3.1.1 of the [RISC-V privileged ISA](https://github.com/ris
 Example: for RV32IM, two relevant coverpoints are to check whether the bit at index 12 of misa is 0 and 1(```misa && 0x1000 == 0x1000```). 
 Note - You can restrict yourself to list of ratified extensions for the sake of this task. The program need not check for the validity of the ISA string. 
 
+![](https://drive.google.com/uc?export=view&id=1W-meo8feSQ1jqAXyo1arzbC6_0BWp4tC)
+
+
 2. Write an assembly test which covers one of the coverpoints generated above. Bonus points if the test contains a trap handler.
 
 What is a coverpoint?
