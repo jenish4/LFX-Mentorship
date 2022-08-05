@@ -1,0 +1,15 @@
+# LFX Mentorship Coding Challenge
+
+# Jenish Shah
+# jenishshah08@gmail.com
+
+# Assembly code to satisfy the coverpoint "misa && 0x1000 == 0x1000"
+# Reference: https://shakti.org.in/docs/risc-v-asm-manual.pdf
+
+addi x5, x0, 0x1000   # store 0x1000 in x5
+csrrc x0, misa, x5    # the value in x5 acts as a bit mask so the M-bit of misa is set to zero
+csrrc x2, misa, zero  # misa value stored in x2 and the value in misa is unchanged
+addi x2, x0, 0x1000   # the M-bit is made high
+csrw misa, x2         # value updated in misa
+
+# Thank You!
